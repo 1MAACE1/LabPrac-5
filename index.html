@@ -4,7 +4,8 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Макет сайта — Flexbox</title>
-  <link rel="stylesheet" href="./Макет сайта — Flexbox_files/style.css">
+  <link rel="stylesheet" href="./style.css">
+ 
 </head>
 <body>
   <header class="header">
@@ -24,19 +25,51 @@
     <main class="content">
       <h2>Добро пожаловать!</h2>
       <p>Я -Алексей Гаврильченко, профессиональный видеоредактор с 3-летним опытом работы. Я серьёзно отношусь к каждому заданию и сделаю всё, чтобы Вы остались довольны сотрудничеством!</p>
-      
-    
-<section class="projects">
-  <h2>Примеры работ</h2>
-  <div class="video-previews">
-    <a href="https://youtu.be/m4HyXz0tTRg?si=439Ezzb9WxfiHK78" target="_blank">
-      <img src="https://img.youtube.com/vi/m4HyXz0tTRg/hqdefault.jpg" alt="Проект 1">
-    </a>
-    <a href="https://www.youtube.com/watch?v=8ZGGE1xWUWQ" target="_blank">
-      <img src="https://img.youtube.com/vi/8ZGGE1xWUWQ/hqdefault.jpg" alt="Проект 2">
-    </a>
-  </div>
-</section>
+
+<h2>Примеры работ</h2>
+
+
+<div class="filters">
+  <button data-category="all">Все</button>
+  <button data-category="realestate">Недвижимость</button>
+  <button data-category="music">Музыка</button>
+</div>
+
+<div class="gallery">
+  <img src="https://img.youtube.com/vi/8ZGGE1xWUWQ/hqdefault.jpg" data-category="realestate" data-video="https://www.youtube.com/watch?v=8ZGGE1xWUWQ">
+  <img src="https://img.youtube.com/vi/m4HyXz0tTRg/hqdefault.jpg" data-category="realestate" data-video="https://www.youtube.com/watch?v=m4HyXz0tTRg">
+  <img src="https://img.youtube.com/vi/ulitv5lL_AI/hqdefault.jpg" data-category="music" data-video="https://www.youtube.com/watch?v=ulitv5lL_AI">
+  <img src="https://img.youtube.com/vi/Szf00UMk1qY/hqdefault.jpg" data-category="music" data-video="https://www.youtube.com/watch?v=Szf00UMk1qY">
+</div>
+
+
+
+
+
+<h2>Часто задаваемые вопросы</h2>
+
+<div class="accordion-item">
+  <h3 class="accordion-title">С какими видео форматами я работаю?</h3>
+  <div class="accordion-content">Самыми популярными являются: MP4, MOV, MKV, но возможны и другие</div>
+</div>
+
+<div class="accordion-item">
+  <h3 class="accordion-title">Для каких платформ я редактирую видео?</h3>
+  <div class="accordion-content">YouTube, Instagram, Facebook, TikTok и многие другие</div>
+</div>
+
+<div class="accordion-item">
+  <h3 class="accordion-title">Что нужно чтобы начать работу со мной?</h3>
+  <div class="accordion-content">Просто пришлите исходый видеофайл - и мы обсудим все детали</div>
+</div>
+
+
+
+<div id="modal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+  <a id="modalVideo" class="modal-video" target="_blank">Смотреть видео</a>
+</div>
 
   <section class="contacts">
       <h2>Контакты</h2>
@@ -49,8 +82,11 @@
 </main>
   </div>
 
+
+
   <footer class="footer">
     <p>© 2025 Алексей Гаврильченко — Все права защищены</p>
   </footer>
-
+<button id="toTopBtn" class="to-top">↑</button>
+ <script src="script.js"></script>
 </body></html>
